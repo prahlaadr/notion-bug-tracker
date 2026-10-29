@@ -1,0 +1,30 @@
+/* Notion Bug Tracker widget - neutral styling. Override to match your app. */
+.feedback-root { position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 40; font-family: system-ui, sans-serif; }
+.fb-fab { width: 54px; height: 54px; border-radius: 50%; border: 3px solid #141414; background: #0d1b2a; color: #fff; font-size: 1.4rem; box-shadow: 5px 5px 0 #141414; cursor: pointer; display: grid; place-items: center; transition: transform 0.06s, box-shadow 0.06s; }
+.fb-fab:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #141414; }
+.fb-card { width: min(360px, calc(100vw - 2rem)); background: #fff; border: 3px solid #141414; border-radius: 18px; box-shadow: 6px 6px 0 #141414; padding: 1.1rem; }
+.fb-card h3 { margin: 0 0 0.75rem; font-size: 1.25rem; }
+.fb-kinds { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; }
+.fb-kind { flex: 1; border: 2px solid #141414; background: #fff; border-radius: 10px; padding: 0.35rem 0.25rem; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+.fb-kind.active { background: #0d1b2a; color: #fff; }
+.fb-text { width: 100%; border: 2px solid #141414; border-radius: 12px; padding: 0.6rem 0.75rem; font-size: 0.95rem; resize: vertical; box-sizing: border-box; font-family: inherit; }
+.fb-link { display: inline-block; background: none; border: none; color: #0d1b2a; font-weight: 600; font-size: 0.85rem; text-decoration: underline; padding: 0.4rem 0; cursor: pointer; }
+.fb-shot { display: flex; align-items: center; gap: 0.5rem; margin: 0.3rem 0; }
+.fb-shot img { width: 76px; height: 50px; object-fit: cover; border: 2px solid #141414; border-radius: 6px; }
+.fb-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.6rem; }
+.fb-btn { border: 2px solid #141414; background: #fff; border-radius: 10px; padding: 0.4rem 0.9rem; font-weight: 700; cursor: pointer; }
+.fb-btn-primary { background: #fe8cc2; }
+.fb-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.fb-thanks { text-align: center; font-weight: 700; font-size: 1.25rem; padding: 1.25rem 0.5rem; }
+.fb-thanks span { font-weight: 400; font-size: 0.9rem; color: #777; }
+
+/* Screenshot annotator (rect / arrow / pen / text) - self-contained overlay. */
+.fb-anno-overlay { position: fixed; inset: 0; z-index: 60; background: rgba(20, 20, 20, 0.82); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem; }
+.fb-anno-bar { display: flex; align-items: center; gap: 0.4rem; background: #fff; border: 3px solid #141414; border-radius: 12px; padding: 0.4rem 0.55rem; box-shadow: 4px 4px 0 #141414; }
+.fb-anno-div { width: 1px; height: 22px; background: #141414; opacity: 0.2; }
+.fb-anno-tool { min-width: 34px; font-size: 1rem; line-height: 1; padding: 0.35rem 0.5rem; }
+.fb-anno-tool.active { background: #0d1b2a; color: #fff; }
+.fb-anno-sw { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #141414; cursor: pointer; padding: 0; }
+.fb-anno-sw.active { outline: 2px solid #141414; outline-offset: 2px; }
+.fb-anno-canvas { max-width: min(92vw, 1100px); max-height: 74vh; background: #fff; border: 3px solid #141414; border-radius: 8px; box-shadow: 6px 6px 0 #141414; touch-action: none; }
+.fb-anno-text-input { position: fixed; z-index: 61; background: rgba(255, 255, 255, 0.95); border: 2px solid; border-radius: 6px; padding: 0.15rem 0.4rem; font: 700 1rem system-ui, sans-serif; min-width: 120px; }
